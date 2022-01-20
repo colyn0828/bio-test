@@ -6,9 +6,7 @@ const Card = () => {
   const [shortenUrl, setShortenUrl] = useState("");
 
   const onClickSubmit = () => {
-    fetch(
-      "https://www.easy-mock.com/mock/59801fd8a1d30433d84f198c/example/user/all"
-    )
+    fetch("https://api.shrtco.de/v2/")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -19,9 +17,9 @@ const Card = () => {
 
   return (
     <div>
-      <div className="">
+      <div className="card">
         <form onSubmit={onClickSubmit}>
-          <input placeholder="Shorten a link here..."></input>
+          <input placeholder="Shorten a link here..." />
           <button className="btn">Shorten It!</button>
         </form>
       </div>

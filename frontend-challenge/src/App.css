@@ -4,8 +4,10 @@
 
 .btn {
   width: 10rem;
-  background: #23f5f5;
+  height: 2rem;
+  background: #32dddd;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 10px;
+  border: 0;
 }

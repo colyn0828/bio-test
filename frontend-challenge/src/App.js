@@ -1,13 +1,11 @@
-import React from 'react';
-import BackwardCounter from './components/BackwardCounter';
-import ForwardCounter from './components/ForwardCounter';
-
+import React from "react";
+import Banner from "./components/Banner";
+import "./App.css";
 function App() {
   return (
-    <React.Fragment>
-      <ForwardCounter />
-      <BackwardCounter />
-    </React.Fragment>
+    <div className="container">
+      <Banner></Banner>
+    </div>
   );
 }
 

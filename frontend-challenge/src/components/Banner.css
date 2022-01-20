@@ -1,0 +1,12 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  flex: 2 1 auto;
+}
+
+.banner-right {
+  width: 50%;
+}
+.banner-right img {
+  width: 80%;
+}

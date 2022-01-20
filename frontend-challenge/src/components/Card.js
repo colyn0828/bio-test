@@ -6,12 +6,17 @@ const Card = () => {
   const [shortenUrl, setShortenUrl] = useState("");
   const [validUrl, setValidUrl] = useState(true);
 
-  const onClickSubmit = (e) => {
+  const handleChange = (e) => {
+    console.log(e.target.value);
     if (!e.target.value.includes("https://")) {
       setValidUrl(false);
       setInputUrl("https://" + e.target.value);
+    } else {
+      setValidUrl(true);
+      setInputUrl(e.target.value);
     }
-
+  };
+  const onClickSubmit = () => {
     fetch("https://api.shrtco.de/v2/shorten", {
       method: "POST",
       body: JSON.stringify({
@@ -29,7 +34,7 @@ const Card = () => {
     <div>
       <div className="card">
         <form className="form" onSubmit={onClickSubmit}>
-          <input placeholder="Shorten a link here..." />
+          <input placeholder="Shorten a link here..." onChange={handleChange} />
           <button className="btn">Shorten It!</button>
         </form>
       </div>

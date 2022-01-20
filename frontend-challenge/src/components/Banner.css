@@ -1,7 +1,11 @@
 .banner {
   display: flex;
   justify-content: space-between;
-  flex: 2 1 auto;
+}
+
+.banner-left {
+  max-width: 20rem;
+  margin-right: 10rem;
 }
 
 .banner-right {
@@ -9,4 +13,5 @@
 }
 .banner-right img {
   width: 80%;
+  margin-bottom: 5rem;
 }
